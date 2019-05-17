@@ -1,7 +1,8 @@
 class Item:
-    def __init__(self, name, description):
+    def __init__(self, name, t, durability):
         self.name = name
-        self.description = description
+        self.type = t
+        self.durability = durability
 
-    def __repr__(self):
-        return f"{self.name}: {self.description}"
+    def __str__(self):
+        return f"Item Name & Description: {self.name}\n: {self.description}\n"
