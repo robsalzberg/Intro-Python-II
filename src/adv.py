@@ -72,7 +72,7 @@ while True:
         player.current_room = try_dir(second_arg[0],player.current_room)
     elif first_arg == 'look':
         print(player.current_room.description)
-    elif first_arg == 'inventory' or 'i':
+    elif first_arg == 'inventory':
         print(player.item_list()) 
     elif first_arg == 'search':
         items = player.current_room.items
@@ -84,7 +84,7 @@ while True:
             second_arg = inpt[-1]
             if first_arg[0] == 'q':
                 break
-            elif first_arg == 'get' or 'take':
+            elif first_arg == 'get':
                 for i in items:
                     if i.name == second_arg:
                         print(i)
