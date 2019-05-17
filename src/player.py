@@ -3,14 +3,13 @@
 
 
 class Player:
-
-    def __init__(self, name, room):
+    def __init__(self, name, starting_room):
         self.name = name
-        self.room = room
+        self.current_room = starting_room
+        self.items = []
 
-    def __repr__(self):
+    def __str__(self):
+        return f'Current Area : {self.current_room.name}\n '
 
-        output = ""
-        output += "Name: " + self.name + "\n"
-        output += "Room: " + self.room
-        return output
+    def item_list(self):
+        return " ".join(str(item.name) for item in self.items)
